@@ -1,4 +1,4 @@
-package net.trollyloki.cookiedebugmod.mixin.client;
+package net.trollyloki.cookieapi.mixin.client;
 
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;

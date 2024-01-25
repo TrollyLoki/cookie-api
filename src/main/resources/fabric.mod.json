@@ -1,30 +1,30 @@
 {
 	"schemaVersion": 1,
-	"id": "cookie-debug-mod",
+	"id": "cookie-api",
 	"version": "${version}",
-	"name": "Cookie Debug Mod",
-	"description": "This mod adds commands to read and write cookies from/to clients",
+	"name": "Cookie API",
+	"description": "This mod adds an API and commands to read and write cookies from/to clients",
 	"authors": [
 		"TrollyLoki"
 	],
 	"contact": {
-		"sources": "https://github.com/TrollyLoki/cookie-debug-mod"
+		"sources": "https://github.com/TrollyLoki/cookie-api"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/cookie-debug-mod/icon.png",
+	"icon": "assets/cookie-api/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.trollyloki.cookiedebugmod.CookieDebugMod"
+			"net.trollyloki.cookieapi.CookieApi"
 		],
 		"client": [
-			"net.trollyloki.cookiedebugmod.CookieDebugModClient"
+			"net.trollyloki.cookieapi.CookieApiClient"
 		]
 	},
 	"mixins": [
-		"cookie-debug-mod.mixins.json",
+		"cookie-api.mixins.json",
 		{
-			"config": "cookie-debug-mod.client.mixins.json",
+			"config": "cookie-api.client.mixins.json",
 			"environment": "client"
 		}
 	],

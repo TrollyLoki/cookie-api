@@ -22,7 +22,7 @@ loom {
     splitEnvironmentSourceSets()
 
 	mods {
-		"cookie-debug-mod" {
+		"cookie-api" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}

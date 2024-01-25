@@ -1,4 +1,4 @@
-package net.trollyloki.cookiedebugmod.mixin;
+package net.trollyloki.cookieapi.mixin;
 
 import net.minecraft.network.ClientConnection;
 import net.minecraft.network.packet.c2s.common.CookieResponseC2SPacket;
@@ -10,8 +10,8 @@ import net.minecraft.server.network.ServerCommonNetworkHandler;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
-import net.trollyloki.cookiedebugmod.CookieDebugMod;
-import net.trollyloki.cookiedebugmod.CookieNetworkHandler;
+import net.trollyloki.cookieapi.CookieApi;
+import net.trollyloki.cookieapi.CookieNetworkHandler;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 
@@ -57,7 +57,7 @@ public abstract class CookieNetworkMixin extends ServerCommonNetworkHandler impl
         Identifier identifier = packet.key();
 
         if (!cookieRequests.containsKey(identifier)) {
-            CookieDebugMod.LOGGER.warn("Unexpected cookie response packet received from " + player.getGameProfile().getName());
+            CookieApi.LOGGER.warn("Unexpected cookie response packet received from " + player.getGameProfile().getName());
             return;
         }
 

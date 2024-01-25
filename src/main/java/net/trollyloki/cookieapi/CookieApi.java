@@ -1,4 +1,4 @@
-package net.trollyloki.cookiedebugmod;
+package net.trollyloki.cookieapi;
 
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
@@ -26,11 +26,11 @@ import static net.minecraft.command.argument.IdentifierArgumentType.identifier;
 import static net.minecraft.server.command.CommandManager.argument;
 import static net.minecraft.server.command.CommandManager.literal;
 
-public class CookieDebugMod implements ModInitializer {
+public class CookieApi implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-    public static final Logger LOGGER = LoggerFactory.getLogger("cookie-debug-mod");
+    public static final Logger LOGGER = LoggerFactory.getLogger("cookie-api");
 
 	/**
 	 * Stores a cookie on a player's client. A single cookie cannot be longer than 5,120 bytes.

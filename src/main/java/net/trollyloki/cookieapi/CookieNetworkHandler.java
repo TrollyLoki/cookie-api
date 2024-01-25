@@ -1,4 +1,4 @@
-package net.trollyloki.cookiedebugmod;
+package net.trollyloki.cookieapi;
 
 import net.minecraft.util.Identifier;
 
