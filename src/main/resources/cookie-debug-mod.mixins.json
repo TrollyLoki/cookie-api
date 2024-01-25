@@ -3,7 +3,8 @@
 	"package": "net.trollyloki.cookiedebugmod.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"CookieResponseMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
