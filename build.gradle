@@ -24,7 +24,6 @@ loom {
 	mods {
 		"cookie-api" {
 			sourceSet sourceSets.main
-			sourceSet sourceSets.client
 		}
 	}
 
