@@ -41,7 +41,7 @@ public class CookieApi implements ModInitializer {
 	 * @throws IllegalArgumentException if payload is too long
 	 */
 	public static void storeCookie(ServerPlayerEntity player, Identifier identifier, byte[] payload) {
-		((CookieNetworkHandler) player.networkHandler).storeCookie(identifier, payload);
+		((CookiePlayNetworkHandler) player.networkHandler).storeCookie(identifier, payload);
 	}
 
 	/**

@@ -3,7 +3,8 @@
 	"package": "net.trollyloki.cookieapi.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"CookieNetworkMixin"
+		"CookieNetworkMixin",
+		"CookiePlayNetworkMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
