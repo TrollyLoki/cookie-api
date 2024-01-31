@@ -19,9 +19,9 @@ public abstract class CookiePlayNetworkMixin extends ServerCommonNetworkHandler 
 
     @Override
     public void storeCookie(Identifier identifier, byte[] payload) {
-        if (payload.length > StoreCookieS2CPacket.MAX_COOKIE_LENGTH) {
+        if (payload.length > CookieLengthAccessor.getMaxLength()) {
             throw new IllegalArgumentException("Payload too long (%d > %d)"
-                    .formatted(payload.length, StoreCookieS2CPacket.MAX_COOKIE_LENGTH));
+                    .formatted(payload.length, CookieLengthAccessor.getMaxLength()));
         }
         sendPacket(new StoreCookieS2CPacket(identifier, payload));
     }

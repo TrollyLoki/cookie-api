@@ -4,13 +4,13 @@ import com.mojang.brigadier.Command;
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
-import net.minecraft.network.packet.s2c.common.StoreCookieS2CPacket;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.ClickEvent;
 import net.minecraft.text.HoverEvent;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.trollyloki.cookieapi.mixin.CookieLengthAccessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -99,7 +99,7 @@ public class CookieApi implements ModInitializer {
 												Identifier identifier = getIdentifier(context, "cookie");
 												String string = getString(context, "payload");
 												byte[] payload = string.getBytes(StandardCharsets.UTF_8);
-												if (payload.length > StoreCookieS2CPacket.MAX_COOKIE_LENGTH) {
+												if (payload.length > CookieLengthAccessor.getMaxLength()) {
 													throw PAYLOAD_TOO_LONG.create();
 												}
 
